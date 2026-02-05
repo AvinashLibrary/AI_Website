@@ -1,22 +1,12 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2867
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
-{\colortbl;\red255\green255\blue255;\red16\green23\blue31;\red255\green255\blue255;}
-{\*\expandedcolortbl;;\cssrgb\c7451\c11765\c16078;\cssrgb\c100000\c100000\c100000;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh7680\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
-
-\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 [\
-  \{\
-    "title": "AI Writing Assistant",\
-    "description": "Generate high-quality content using next-gen language models.",\
-    "url": "https://your-affiliate-link-1"\
-  \},\
-  \{\
-    "title": "AI Code Companion",\
-    "description": "Build software faster with AI-assisted coding.",\
-    "url": "https://your-affiliate-link-2"\
-  \}\
-]\
+{
+    "title": "AI Writing Assistant",
+    "description": "Generate high-quality content using next-gen language models.",
+    "url": "https://your-affiliate-link-1"
+  },
+  {
+    "title": "AI Code Companion",
+    "description": "Build software faster with AI-assisted coding.",
+    "url": "https://your-affiliate-link-2"
+  }
+]
 }
