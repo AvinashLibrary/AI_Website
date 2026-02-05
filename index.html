@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future of AI – Curated Tools & Offers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0b0f19;
+      color: #e6e9f0;
+      line-height: 1.6;
+    }
+    header {
+      padding: 3rem 1.5rem;
+      text-align: center;
+      background: radial-gradient(circle at top, #1b255a, #0b0f19 70%);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: #b8c1ff;
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #12172a;
+      border-radius: 14px;
+      padding: 1.25rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      display: flex;
+      flex-direction: column;
+    }
+    .card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+    }
+    .card p {
+      flex: 1;
+      font-size: 0.95rem;
+      color: #cfd6ff;
+    }
+    .card a {
+      margin-top: 1rem;
+      display: inline-block;
+      text-align: center;
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #6cf, #7cffb2);
+      color: #07121f;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .card a:hover {
+      opacity: 0.9;
+    }
+    footer {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #8a93c9;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Future of AI</h1>
+    <p>
+      Exploring how artificial intelligence is transforming software, creativity, business,
+      and everyday life. Tools, insights, and opportunities curated for what comes next.
+    </p>
+  </header>
+
+  <main>
+    <!-- Static content -->
+    <section>
+      <h2>Why AI Matters</h2>
+      <p>
+        AI is no longer experimental. It is shaping how we write code, design products,
+        automate businesses, and make decisions. From large language models to autonomous
+        agents, the next decade will be defined by intelligent systems working alongside humans.
+      </p>
+    </section>
+
+    <!-- Dynamic ads section -->
+    <section>
+      <h2>Recommended AI Tools & Offers</h2>
+      <div id="ads" class="grid">
+        <!-- Ads will be injected here -->
+      </div>
+    </section>
+
+    <!-- More static content -->
+    <section>
+      <h2>What’s Next</h2>
+      <p>
+        Expect AI to become more personalized, more autonomous, and more deeply integrated
+        into daily workflows. The tools featured above are early signals of where this
+        transformation is heading.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 • Future of AI • Some links may be affiliate links
+  </footer>
+
+  <script>
+    /*
+      This page expects a simple JSON file called `ads.json` in the same folder.
+      You only need to edit that file to add / remove affiliate ads.
+
+      Example ads.json:
+
+      [
+        {
+          "title": "AI Writing Assistant",
+          "description": "Generate high-quality content using next-gen language models.",
+          "url": "https://example.com/affiliate-link-1"
+        },
+        {
+          "title": "Code with AI",
+          "description": "Speed up development with an AI-powered coding companion.",
+          "url": "https://example.com/affiliate-link-2"
+        }
+      ]
+    */
+
+    fetch('ads.json')
+      .then(response => response.json())
+      .then(ads => {
+        const adsContainer = document.getElementById('ads');
+        ads.forEach(ad => {
+          const card = document.createElement('div');
+          card.className = 'card';
+
+          card.innerHTML = `
+            <h3>${ad.title}</h3>
+            <p>${ad.description}</p>
+            <a href="${ad.url}" target="_blank" rel="noopener noreferrer">Learn More</a>
+          `;
+
+          adsContainer.appendChild(card);
+        });
+      })
+      .catch(err => {
+        console.error('Failed to load ads.json', err);
+      });
+  </script>
+</body>
+</html>
